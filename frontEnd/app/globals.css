@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+
+  @apply text-gray-900 dark:text-gray-100 bg-white dark:bg-black;
+}
+
+/* ✅ Apply heading styles globally */
+h2, h3, h4, h5, h6 {
+  @apply text-gray-900 dark:text-black;
+}
+
+h1 {
+  @apply text-gray-900 dark:text-white;
+}
+
+/* Optional: Paragraphs */
+p {
+  @apply text-gray-800 dark:text-black;
+}
+
+/* Optional: Inputs or borders */
+input, textarea {
+  @apply  text-black dark:text-white border border-gray-300 dark:border-gray-600;
+}
